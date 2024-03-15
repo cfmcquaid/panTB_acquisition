@@ -54,8 +54,8 @@ params_sample <- function(param_table){
                       rho_soc_new          = rbeta(1, shape1=param_table[1,"rho_soc_new"], shape2=param_table[2,"rho_soc_new"]),
                       betachi_soc_new      = rbeta(1, shape1=param_table[1,"betachi_soc_new"], shape2=param_table[2,"betachi_soc_new"]), 
                       rho_pan              = rbeta(1, shape1=param_table[1,"rho_pan"], shape2=param_table[2,"rho_pan"]), 
-                      # TODO ASSUMING THIS IS ZERO IN TEH FIRST INSTANCE, VARY FOR SENSITIVITY ANALYSIS 
-                      betachi_pan          = 0,#rbeta(1, shape1=param_table[1,"betachi_pan"], shape2=param_table[2,"betachi_pan"]),
+                      # ASSUMING THIS IS ZERO IN THE FIRST INSTANCE, VARY FOR SENSITIVITY ANALYSIS 
+                      betachi_pan          = 0, #rbeta(1, shape1=param_table[1,"betachi_pan"], shape2=param_table[2,"betachi_pan"]),
                       rho_soc_retR         = rbeta(1, shape1=param_table[1,"rho_soc_retR"], shape2=param_table[2,"rho_soc_retR"]),
                       rho_soc_retBX        = 1, 
                       betachi_soc_retR     = rbeta(1, shape1=param_table[1,"betachi_soc_retR"], shape2=param_table[2,"betachi_soc_retR"]), 
@@ -74,7 +74,7 @@ param_ext <- data.frame(E_R               = c(0.581, 0.709, 0.8),
                         P_X               = c(0.540, 0.750, 0.910), 
                         P_BX              = c(0.220, 0.350, 0.500), 
                         S_R               = c(0.003, 0.006, 0.012), 
-                        #S_B               = c(0.003, 0.023, 0.08), # FOR THINKING ABOUT VERY HIGH ACQUISITION RATES
+                        #S_B               = c(0.003, 0.023, 0.08), # FOR VERY HIGH ACQUISITION RATES
                         S_B               = c(0.003, 0.010, 0.023),
                         # S_X value to align with bdq
                         S_X               = c(0.003, 0.010, 0.023), 
